@@ -1,0 +1,814 @@
+/* 
+Embeded font families:
+ - "Frank Ruhl Libre", serif
+ - "Nunito", sans-serif
+*/
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+
+#w_nav{
+    background-color: #191919;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    top: 63px;
+    max-width: 100%;
+    align-self: center;
+    z-index: 1;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #444;  
+    display: none;
+}
+
+#nav_menu{
+    cursor: pointer;
+}
+
+body{
+    font-size: 16px;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+    color:rgb(250, 250, 250);
+    font-family: "Nunito", sans-serif;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+}
+
+#main_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.section_start{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+}
+
+.custom_border{
+    border-bottom: 1px solid aliceblue;
+    width: 90%;
+    opacity: 50%;
+    margin: 10px auto;
+    height: 0;
+}
+
+.custom_border2{
+    border-bottom: 8px dotted aliceblue;
+    width: 40%;
+    opacity: 5%;
+    margin: 15px auto;
+    height: 0;
+}
+
+.custom_border_tile{
+    border-bottom: 1px solid #444;
+    width: 100%;
+    margin: 5px auto;
+    height: 0;
+}
+
+.fill{
+    display: flex;
+    height: 100%;
+    width: 93%;
+    max-width: 1600px;
+    margin: auto auto;
+    background-image: linear-gradient(#151515 , #202020);
+    border-radius: 0.5rem;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#top{
+    background-image: linear-gradient(#161616 , #191919);
+    width: 100%;
+    padding: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    color:azure;
+    transition: all .2s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid #444;
+    box-sizing: border-box;
+}
+
+#navbar{
+    font-size: 1.2rem;
+    flex: 0 1 94%;
+    max-width: 1600px;
+    gap: 15px;
+    display: flex;
+    justify-content: end;
+    margin: 0px auto;
+}
+
+.nav_tile{
+    opacity: 60%;
+    border-radius: 1.5rem;
+    flex: 0 1 60px;
+    height: max-content;
+    padding: 7px 12px;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.nav_tile:hover{
+    opacity: 100%;
+}
+
+#about{
+    margin-top: 80px;
+}
+
+#about > .fill{
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#about > .fill > #selfie{
+    flex: 1 0 auto;
+    align-self: center;
+}
+
+#about > .fill > #selfie > img{
+    border-radius: 50%;
+    width: 250px;
+    margin: 10px 0 0 0;
+}
+
+#about > .fill > #intro{
+    flex: 1 0 50px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about > .fill > #intro > h1{
+    margin: 20px 0 5px 0;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+#story, #hobbies{
+    display: inline-flex;
+    align-items: center;
+    margin: 0px 0 30px 0;
+    gap: 70px;
+    max-width: 65%;
+    align-self: center;
+}
+
+#story_text > p, #hobbies_text > p{
+    line-height: 180%;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+#story_icon_img, #hobbies_icon_img, #skills_icon_img{
+    font-size: 6rem;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+#skills_icon_img, #skills_icon_text{
+    color: rgb(220, 174, 9);
+}
+
+#story_icon_img, #story_icon_text{
+    color: rgb(102, 196, 255);
+}
+
+#hobbies_icon_img, #hobbies_icon_text {
+    color: rgb(216, 71, 38);
+}
+
+#story_icon_text, #hobbies_icon_text, #skills_icon_text{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#skills{
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#skills_icon{
+    text-align: center;
+}
+
+#skills_tiles{
+    width: 80%;
+    align-self: center;
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+#skills_tiles > .tile{
+    flex: 0 1 32%;
+    background-color: #262626;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    transition: all .2s ease-in-out;
+}
+
+#skills_tiles > .tile > .tile_img{
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 5px;
+}
+
+#skills_tiles > .tile > .tile_text{
+    grid-area: 2 / 1 / 3 / 3;
+    padding: 5px 15px 10px 15px;
+    font-size: 1.4rem;
+}
+
+#work > .fill{
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#works{
+    display: flex;
+    width: 80%;
+    align-self: center;
+    gap: 30px;
+}
+
+.work_tile{
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #444;
+    background-color: #262626;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.work_text{
+    flex: 1 1 150px;
+}
+
+.work_text > h2{
+    margin-bottom: 5px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.work_text > h5{
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.work_tile > img{
+    flex: 1 0 200px;
+}
+
+#contact > .fill{
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact h1{
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#contact h5{
+    margin: 0;
+    padding: 0;
+}
+
+#contact > .fill > #content{
+    display: flex;
+    gap: 50px;
+    width: 80%;
+    margin: 15px auto 0 auto;
+}
+
+#contact_text{
+    flex: 0 1 100%;
+    display: flex;
+    font-size: 1.4rem;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact_icons{
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+}
+
+#facebook_icon{
+    background-color: #1877F2;
+    border-radius: 5%;
+}
+
+#instagram_icon{
+    background-color: #f09433; 
+    border-radius: 5%;
+}
+
+.contact_i{
+    justify-self: center;
+    align-self: center;
+    font-size: 5.5rem;
+    width: 130px;
+    opacity: 80%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.contact_i:hover{
+    opacity: 100%;
+    transform: scale(1.1);
+}
+
+#footer{
+    background-image: linear-gradient(#161616 , #191919);
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    justify-content: center;
+    color:azure;
+    border-top: 1px solid #444;
+    box-sizing: border-box;
+}
+
+@media(800px >= width){
+
+    :root{
+        font-size: 13px;
+    }
+
+    #about{
+        margin-top: 80px;
+    }
+
+    #about > .fill > #selfie > img{
+        border-radius: 50%;
+        width: 200px;
+        margin: 10px 0 0 0;
+    }
+    
+    #about > .fill > #intro{
+        flex: 1 0 50px;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+    
+    #about > .fill > #intro > h1{
+        margin: 20px 0 5px 0;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-family: "Frank Ruhl Libre", serif;
+    }
+
+    #navbar{
+        font-size: 1.2rem;
+        flex: 0 1 95%;
+        width: 100%;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        position: relative;
+    }
+
+    .nav_tile{
+        border: none;
+
+    }
+
+    #story, #hobbies{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        align-self: center;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    #story{
+        margin: 30px 0 50px 0;
+    }
+    
+    #story_text, #hobbies_text  > p{
+        font-size: 1.4rem;
+        text-align: justify;
+        flex: 0 1 200px;
+        width: 100%;
+    }
+    
+    #story_icon_img, #hobbies_icon_img, #skills_icon_img{
+        font-size: 5rem;
+        flex: 0 1;
+        text-align: center;
+        display: inline;
+        transition: all .2s ease-in-out;
+    }
+    
+    #story_icon_text, #hobbies_icon_text, #skills_icon_text{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #skills{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    
+    #skills_icon{
+        text-align: center;
+    }
+    
+    #skills_tiles{
+        width: 100%;
+        align-self: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    #skills_tiles > .tile{
+        flex: 0 1;
+        max-width: 100%;
+        background-color: #262626;
+        border-radius: 8px;
+        display: grid;
+        align-self: center;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 100px 1fr;
+        box-sizing: border-box;
+        border: 1px solid #444;
+        transition: all .2s ease-in-out;
+    }
+    
+    #skills_tiles > .tile > .tile_img{
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 5px;
+    }
+    
+    #skills_tiles > .tile > .tile_text{
+        grid-area: 2 / 1 / 3 / 3;
+        padding: 5px 15px 10px 15px;
+        font-size: 1.4rem;
+    }
+
+    #work > .fill{
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #works{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-self: center;
+        gap: 30px;
+    }
+    
+    .work_tile{
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px solid #444;
+        background-color: #262626;
+        border-radius: 20px;
+        margin: 30px 0 0 0;
+        transition: all .2s ease-in-out;
+    }
+    
+    .work_text{
+        flex: 1 1;
+    }
+    
+    .work_text > h2{
+        margin-bottom: 5px;
+        padding: 0;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    
+    .work_text > h5{
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 5px;
+        padding: 0;
+    }
+    
+    .work_tile > img{
+        flex: 1 1 200px;
+    }
+
+    #contact_text{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #contact_icons{
+        justify-content: center;
+        flex-direction: column;
+        opacity: 70%;
+        gap: 20px;
+    }
+    
+    .contact_i{
+        width: 130px;
+        font-size: 4rem;
+        line-height: 200%;
+    }
+
+    #facebook_icon{
+        background-color: #1877F2;
+        border-radius: 10px;
+    }
+    
+    #instagram_icon{
+        background-color: #f09433; 
+        border-radius: 10px;  
+    }
+
+    #contact > .fill > #content{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media(1200px >= width >= 801px){
+
+    :root{
+        font-size: 14px;
+    }
+
+    #story, #hobbies{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0;
+        margin-bottom: 30px;
+        max-width: 90%;
+        align-self: center;
+        gap: 10px;
+    }
+
+    #story{
+        margin: 30px 0 50px 0;
+    }
+    
+    #story_text, #hobbies_text  > p{
+        line-height: 180%;
+        font-size: 1.4rem;
+        text-align: justify;
+        flex: 0 1;
+    }
+    
+    #story_icon_img, #hobbies_icon_img, #skills_icon_img{
+        font-size: 5rem;
+        flex: 0 1 300px;
+        text-align: center;
+        transition: all .2s ease-in-out;
+    }
+    
+    #story_icon_text, #hobbies_icon_text, #skills_icon_text{
+        font-size: 1.4rem;
+    }
+
+    #skills{
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    
+    #skills_icon{
+        text-align: center;
+    }
+    
+    #skills_tiles{
+        width: 100%;
+        align-self: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    #skills_tiles > .tile{
+        flex: 0 1;
+        width: 90%;
+        background-color: #262626;
+        border-radius: 8px;
+        display: grid;
+        align-self: center;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 100px 1fr;
+        box-sizing: border-box;
+        border: 1px solid #444;
+        transition: all .2s ease-in-out;
+    }
+    
+    #skills_tiles > .tile > .tile_img{
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 5px;
+    }
+    
+    #skills_tiles > .tile > .tile_text{
+        grid-area: 2 / 1 / 3 / 3;
+        padding: 5px 15px 10px 15px;
+        font-size: 1.4rem;
+    }
+
+    #work > .fill{
+        flex: 1 0 30%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #works{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-self: center;
+        gap: 30px;
+    }
+    
+    .work_tile{
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px solid #444;
+        background-color: #262626;
+        border-radius: 20px;
+        margin: 30px 0 0 0;
+        transition: all .2s ease-in-out;
+    }
+    
+    .work_text{
+        flex: 1 1 150px;
+    }
+    
+    .work_text > h2{
+        margin: 0 0 5px 0;
+        padding: 0;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    
+    .work_text > h5{
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    
+    .work_tile > img{
+        flex: 1 1 200px;
+    }
+
+    #contact_text{
+        justify-content: center;
+        display: flex;
+        gap: 50px;
+        text-align: justify;
+    }
+
+    #contact_icons{
+        justify-content: center;
+        opacity: 80%;
+        gap: 40px;
+    }
+    
+    .contact_i{
+        width: 130px;
+        font-size: 4rem;
+        line-height: 200%;
+    }
+
+    #facebook_icon{
+        background-color: #1877F2;
+        border-radius: 10px;
+    }
+    
+    #instagram_icon{
+        background-color: #f09433; 
+        border-radius: 10px;  
+    }
+
+    #contact > .fill > #content{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+}
+
+@media(1600px >= width >= 1201px){
+
+    #story, #hobbies{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 1 0;
+        margin-bottom: 30px;
+        max-width: 80%;
+        align-self: center;
+        gap: 10px;
+    }
+
+    #story{
+        margin: 30px 0 50px 0;
+    }
+    
+    #story_text, #hobbies_text  > p{
+        line-height: 180%;
+        font-size: 1.4rem;
+        text-align: justify;
+        flex: 0 1;
+        width: 100%;
+    }
+    
+    #story_icon_img, #hobbies_icon_img, #skills_icon_img{
+        font-size: 5rem;
+        flex: 0 1 300px;
+        text-align: center;
+        display: inline;
+        transition: all .2s ease-in-out;
+    }
+    
+    #story_icon_text, #hobbies_icon_text, #skills_icon_text{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+}
+
+@media(width >= 1601){
+    .fill{
+        max-width: 2000px;
+    }
+}
